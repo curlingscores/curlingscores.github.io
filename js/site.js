@@ -32,19 +32,20 @@ Vue.component ('scores', {
 	props: ['activeEvent'],
 	data: function() {
 		return {
-			currentDraw: {}
+			currentDraw: {},
+			draws: {}
 		}
 	},
 	watch:  {
 		activeEvent: function(newVal, oldVal) {
 			var self = this;
 			var activeEventId = newVal.eventId;  //Not being used yet but would be in production
-			console.log('Prop changed: ', newVal, ' | was: ', oldVal)
 			$.ajax({
-				url: '/test-files/event-games.json',
+				url: '/test-files/event-games' + ((Math.floor(Math.random() * Math.floor(3))) > 1 ? '2' : '') + '.json',
 				method: 'GET',
 				success: function(data){
 					self.currentDraw = getCurrentDraw(data);
+					self.draws = data;
 				},
 				error: function(error){
 					console.log(error);
@@ -59,13 +60,17 @@ var app = new Vue({
 });
 
 function getCurrentDraw(draws){
-	var minDifference = Number.MAX_SAFE_INTEGER;
+	var minDifference = Number.MIN_SAFE_INTEGER;
 	currentDate = new Date();
-	console.log(draws)
+	var closestDraw;
 	for(var i = 0; i < draws.length; i++){
 		drawDate = new Date(draws[i].startsAt * 1000);
-		console.log(drawDate);
 		var dateDifference = drawDate - currentDate;
-		console.log(dateDifference);
+		if (dateDifference < 0 && dateDifference > minDifference){
+			minDifference = dateDifference;
+			closestDraw = draws[i];
+		}
 	}
+	console.log(closestDraw);
+	return closestDraw;
 }
