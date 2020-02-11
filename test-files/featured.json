@@ -1,0 +1,360 @@
+{ 
+	"count":5,
+	"data":[ 
+	   { 
+		  "eventId":"6250",
+		  "eventWeek":{ 
+ 
+		  },
+		  "endDate":"2019-11-23",
+		  "startDate":"2019-11-16",
+		  "displayName":"Le Gruyere AOP European Curling Championships",
+		  "division":"men",
+		  "location":"Helsingborg, Sweden",
+		  "featuredDraw":{ 
+			 "displayName":"SF",
+			 "drawName":"Semi-finals",
+			 "startsAt":"1574359200",
+			 "ends":"10",
+			 "games":[ 
+				{ 
+				   "gameId":"263161",
+				   "awayTeamId":"140923",
+				   "homeTeamId":"140922",
+				   "awayTeamDisplayName":"Sweden",
+				   "awayTeamShortName":"Sweden",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Scotland",
+				   "homeTeamShortName":"Scotland",
+				   "awayScore":"3",
+				   "homeScore":"1",
+				   "gameStatus":"in-progress",
+				   "currentEnd":"4",
+				   "statusText":"Playing 4"
+				},
+				{ 
+				   "gameId":"263162",
+				   "awayTeamId":"140924",
+				   "homeTeamId":"140915",
+				   "awayTeamDisplayName":"Switzerland",
+				   "awayTeamShortName":"Switzerland",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Denmark",
+				   "homeTeamShortName":"Denmark",
+				   "awayScore":"2",
+				   "homeScore":"1",
+				   "gameStatus":"in-progress",
+				   "currentEnd":"4",
+				   "statusText":"Playing 4"
+				}
+			 ]
+		  },
+		  "bracketURL":"http://curlingzone.com/event.php?eventid=6250&view=Round-Robin&tp=0",
+		  "playoffURL":"http://curlingzone.com/event.php?eventid=6250&view=Playoffs",
+		  "status":"in-progress",
+		  "useTeamName":true
+	   },
+	   { 
+		  "eventId":"5890",
+		  "eventWeek":{ 
+ 
+		  },
+		  "endDate":"2019-11-24",
+		  "startDate":"2019-11-21",
+		  "displayName":"Challenge Casino de Charlevoix",
+		  "division":"men",
+		  "location":"Clermont, Quebec",
+		  "featuredDraw":{ 
+			 "displayName":"2",
+			 "drawName":"Draw 2",
+			 "startsAt":"1574352000",
+			 "ends":"8",
+			 "games":[ 
+				{ 
+				   "gameId":"264159",
+				   "awayTeamId":"141251",
+				   "homeTeamId":"141252",
+				   "awayTeamDisplayName":"Jordan Chandler",
+				   "awayTeamShortName":"J. Chandler",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Jean-Sebastien Roy",
+				   "homeTeamShortName":"J. Roy",
+				   "awayScore":"5",
+				   "homeScore":"1",
+				   "gameStatus":"final",
+				   "currentEnd":"7",
+				   "statusText":"Final (7)"
+				},
+				{ 
+				   "gameId":"264160",
+				   "awayTeamId":"141253",
+				   "homeTeamId":"141254",
+				   "awayTeamDisplayName":"Greg Balsdon",
+				   "awayTeamShortName":"G. Balsdon",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Martin Ferland",
+				   "homeTeamShortName":"M. Ferland",
+				   "awayScore":"4",
+				   "homeScore":"4",
+				   "gameStatus":"in-progress",
+				   "currentEnd":"8",
+				   "statusText":"Playing 8"
+				},
+				{ 
+				   "gameId":"264161",
+				   "awayTeamId":"141255",
+				   "homeTeamId":"141256",
+				   "awayTeamDisplayName":"Fredrik Nyman",
+				   "awayTeamShortName":"F. Nyman",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Steven Munroe",
+				   "homeTeamShortName":"S. Munroe",
+				   "awayScore":"3",
+				   "homeScore":"4",
+				   "gameStatus":"in-progress",
+				   "currentEnd":"7",
+				   "statusText":"Playing 7"
+				},
+				{ 
+				   "gameId":"264162",
+				   "awayTeamId":"141257",
+				   "homeTeamId":"141258",
+				   "awayTeamDisplayName":"Michael Fournier",
+				   "awayTeamShortName":"M. Fournier",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Alek Bedard",
+				   "homeTeamShortName":"A. Bedard",
+				   "awayScore":"4",
+				   "homeScore":"6",
+				   "gameStatus":"in-progress",
+				   "currentEnd":"8",
+				   "statusText":"Playing 8"
+				}
+			 ]
+		  },
+		  "bracketURL":"http://curlingzone.com/event.php?eventid=5890&view=Round-Robin&tp=0",
+		  "playoffURL":"http://curlingzone.com/event.php?eventid=5890&view=Playoffs",
+		  "status":"in-progress",
+		  "useTeamName":false
+	   },
+	   { 
+		  "eventId":"6252",
+		  "eventWeek":{ 
+ 
+		  },
+		  "endDate":"2019-11-23",
+		  "startDate":"2019-11-16",
+		  "displayName":"Le Gruyere AOP European B Curling Championships",
+		  "division":"men",
+		  "location":"Helsingborg, Sweden",
+		  "featuredDraw":{ 
+			 "displayName":"18",
+			 "drawName":"Draw 18",
+			 "startsAt":"1574341200",
+			 "ends":"10",
+			 "games":[ 
+				{ 
+				   "gameId":"263283",
+				   "awayTeamId":"140952",
+				   "homeTeamId":"140953",
+				   "awayTeamDisplayName":"Finland",
+				   "awayTeamShortName":"Finland",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Estonia",
+				   "homeTeamShortName":"Estonia",
+				   "awayScore":"9",
+				   "homeScore":"12",
+				   "gameStatus":"final",
+				   "currentEnd":"10",
+				   "statusText":"Final (10)"
+				}
+			 ]
+		  },
+		  "bracketURL":"http://curlingzone.com/event.php?eventid=6252&view=Round-Robin&tp=0",
+		  "playoffURL":"http://curlingzone.com/event.php?eventid=6252&view=Playoffs",
+		  "status":"in-progress",
+		  "useTeamName":true
+	   },
+	   { 
+		  "eventId":"6251",
+		  "eventWeek":{ 
+ 
+		  },
+		  "endDate":"2019-11-23",
+		  "startDate":"2019-11-16",
+		  "displayName":"Le Gruyere AOP European B Curling Championships",
+		  "division":"women",
+		  "location":"Helsingborg, Sweden",
+		  "featuredDraw":{ 
+			 "displayName":"18",
+			 "drawName":"Draw 18",
+			 "startsAt":"1574341200",
+			 "ends":"10",
+			 "games":[ 
+				{ 
+				   "gameId":"263369",
+				   "awayTeamId":"140937",
+				   "homeTeamId":"140940",
+				   "awayTeamDisplayName":"Finland",
+				   "awayTeamShortName":"Finland",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Lithuania",
+				   "homeTeamShortName":"Lithuania",
+				   "awayScore":"6",
+				   "homeScore":"7",
+				   "gameStatus":"final",
+				   "currentEnd":"EE",
+				   "statusText":"Final (EE)"
+				},
+				{ 
+				   "gameId":"263370",
+				   "awayTeamId":"140945",
+				   "homeTeamId":"140943",
+				   "awayTeamDisplayName":"Turkey",
+				   "awayTeamShortName":"Turkey",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Spain",
+				   "homeTeamShortName":"Spain",
+				   "awayScore":"11",
+				   "homeScore":"7",
+				   "gameStatus":"final",
+				   "currentEnd":"9",
+				   "statusText":"Final (9)"
+				},
+				{ 
+				   "gameId":"263371",
+				   "awayTeamId":"140936",
+				   "homeTeamId":"140939",
+				   "awayTeamDisplayName":"England",
+				   "awayTeamShortName":"England",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Italy",
+				   "homeTeamShortName":"Italy",
+				   "awayScore":"1",
+				   "homeScore":"9",
+				   "gameStatus":"final",
+				   "currentEnd":"6",
+				   "statusText":"Final (6)"
+				}
+			 ]
+		  },
+		  "bracketURL":"http://curlingzone.com/event.php?eventid=6251&view=Round-Robin&tp=0",
+		  "playoffURL":"http://curlingzone.com/event.php?eventid=6251&view=Playoffs",
+		  "status":"in-progress",
+		  "useTeamName":true
+	   },
+	   { 
+		  "eventId":"6249",
+		  "eventWeek":{ 
+ 
+		  },
+		  "endDate":"2019-11-23",
+		  "startDate":"2019-11-16",
+		  "displayName":"Le Gruyere AOP European Curling Championships",
+		  "division":"women",
+		  "location":"Helsingborg, Sweden",
+		  "featuredDraw":{ 
+			 "displayName":"W9",
+			 "drawName":"Draw W9",
+			 "startsAt":"1574341200",
+			 "ends":"10",
+			 "games":[ 
+				{ 
+				   "gameId":"263223",
+				   "awayTeamId":"140903",
+				   "homeTeamId":"140898",
+				   "awayTeamDisplayName":"Switzerland",
+				   "awayTeamShortName":"Switzerland",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Latvia",
+				   "homeTeamShortName":"Latvia",
+				   "awayScore":"9",
+				   "homeScore":"3",
+				   "gameStatus":"final",
+				   "currentEnd":"8",
+				   "statusText":"Final (8)"
+				},
+				{ 
+				   "gameId":"263224",
+				   "awayTeamId":"140897",
+				   "homeTeamId":"140899",
+				   "awayTeamDisplayName":"Germany",
+				   "awayTeamShortName":"Germany",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Norway",
+				   "homeTeamShortName":"Norway",
+				   "awayScore":"7",
+				   "homeScore":"5",
+				   "gameStatus":"final",
+				   "currentEnd":"10",
+				   "statusText":"Final (10)"
+				},
+				{ 
+				   "gameId":"263225",
+				   "awayTeamId":"140894",
+				   "homeTeamId":"140893",
+				   "awayTeamDisplayName":"Denmark",
+				   "awayTeamShortName":"Denmark",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Czech Republic",
+				   "homeTeamShortName":"Czech Republic",
+				   "awayScore":"5",
+				   "homeScore":"7",
+				   "gameStatus":"final",
+				   "currentEnd":"10",
+				   "statusText":"Final (10)"
+				},
+				{ 
+				   "gameId":"263226",
+				   "awayTeamId":"140902",
+				   "homeTeamId":"140900",
+				   "awayTeamDisplayName":"Sweden",
+				   "awayTeamShortName":"Sweden",
+				   "awayHammer":true,
+				   "homeHammer":false,
+				   "homeTeamDisplayName":"Russia",
+				   "homeTeamShortName":"Russia",
+				   "awayScore":"6",
+				   "homeScore":"8",
+				   "gameStatus":"final",
+				   "currentEnd":"10",
+				   "statusText":"Final (10)"
+				},
+				{ 
+				   "gameId":"263227",
+				   "awayTeamId":"140901",
+				   "homeTeamId":"140896",
+				   "awayTeamDisplayName":"Scotland",
+				   "awayTeamShortName":"Scotland",
+				   "awayHammer":false,
+				   "homeHammer":true,
+				   "homeTeamDisplayName":"Estonia",
+				   "homeTeamShortName":"Estonia",
+				   "awayScore":"7",
+				   "homeScore":"6",
+				   "gameStatus":"final",
+				   "currentEnd":"10",
+				   "statusText":"Final (10)"
+				}
+			 ]
+		  },
+		  "bracketURL":"http://curlingzone.com/event.php?eventid=6249&view=Round-Robin&tp=0",
+		  "playoffURL":"http://curlingzone.com/event.php?eventid=6249&view=Playoffs",
+		  "status":"in-progress",
+		  "useTeamName":true
+	   }
+	]
+ }

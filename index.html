@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Curling Scores</title>
+	<link rel="stylesheet" href="/styles/site.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body >
+
+	<script type="text/x-template" id="scoreboard">
+		<div class="scoreboard">
+			<h3>Scores</h3>
+
+			<ul class="scoreboard-events-container" >
+				<li class="scoreboard-events-list" v-for="event in events" v-on:click="activeEvent = event">
+					<event v-bind="{event}"></event>
+				</li>
+			</ul>
+			<div class="scoreboard-scores-container">
+				<scores v-bind="{activeEvent}"></scores>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="event">
+		<div class="scoreboard-event">
+			<div class="event-name">
+				{{event.displayName}}
+			</div>
+			<div class="event-type">
+				{{event.division}}
+			</div>
+			<div class="event-location">
+				{{event.location}}
+			</div>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="scores">
+		<div class="scoreboard-scores">
+			
+		</div>
+	</script>
+
+	<div id="app">
+		<scoreboard></scoreboard>
+	</div>
+	
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="/js/site.js"></script>
+</body>
+</html>
+
