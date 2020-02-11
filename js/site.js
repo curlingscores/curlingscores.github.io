@@ -33,7 +33,8 @@ Vue.component ('scores', {
 	data: function() {
 		return {
 			currentDraw: {},
-			draws: {}
+			draws: {},
+			linescoreIsActive: false
 		}
 	},
 	watch:  {

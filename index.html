@@ -39,7 +39,7 @@
 	</script>
 
 	<script type="text/x-template" id="scores">
-		<div class="scoreboard-scores">
+		<div class="scoreboard-scores" v-if="!linescoreIsActive">
 			<h4 class="scoreboard-event-name">{{activeEvent.displayName}}</h4>
 			<select class="draw-select" v-if="draws && draws.length > 0">
 				<option class="draw-select-option" v-for="draw in draws">
@@ -54,7 +54,10 @@
 					<div class="score-amount score-away-amount">{{game.awayScore}}</div>
 				</li>
 			</ul>
-			<p class="linescores-no-games" v-else>No games!</p>
+			<p class="scores-no-games" v-else>No games!</p>
+		</div>
+		<div class="linescore-container">
+			
 		</div>
 	</script>
 
