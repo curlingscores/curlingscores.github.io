@@ -10,16 +10,18 @@
 <body >
 
 	<script type="text/x-template" id="scoreboard">
-		<div class="scoreboard">
-			<h3>Scores</h3>
+		<div class="scoreboard-container">
+			<div class="scoreboard">
+				<h3 class="scoreboard-title">Scores</h3>
 
-			<ul class="scoreboard-events-container" >
-				<li class="scoreboard-events-list" v-for="event in events" v-on:click="activeEvent = event">
-					<event v-bind="{event}"></event>
-				</li>
-			</ul>
-			<div class="scoreboard-scores-container">
-				<scores v-bind="{activeEvent}"></scores>
+				<ul class="scoreboard-events-container" >
+					<li class="scoreboard-events-list" v-for="event in events" v-on:click="activeEvent = event">
+						<event v-bind="{event}"></event>
+					</li>
+				</ul>
+				<div class="scoreboard-scores-container">
+					<scores v-bind="{activeEvent}"></scores>
+				</div>
 			</div>
 		</div>
 	</script>
@@ -56,7 +58,7 @@
 			</ul>
 			<p class="scores-no-games" v-else>No games!</p>
 		</div>
-		<div class="linescore-container">
+		<div class="linescore-container" v-else>
 			
 		</div>
 	</script>
@@ -67,7 +69,7 @@
 		</div>
 	</script>
 
-	<div id="app">
+	<div id="app" class="app">
 		<scoreboard></scoreboard>
 	</div>
 	

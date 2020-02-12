@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: #f7f7f7;
+  font-family: "Open Sans";
+}
+.scoreboard-container {
+  padding: 20px 20px;
+}
+.scoreboard {
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+  background: white;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.scoreboard-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 15px 30px;
+  background: #6daaf8;
+  color: white;
+}
+.scoreboard-events-container {
+  list-style: none;
+  border-right: 1px solid #ccc;
+}
+.scoreboard-events-list {
+  padding: 5px 15px;
+  border-bottom: 1px solid #ccc;
+}
+.scoreboard-events-list:last-child {
+  border-bottom: none;
+}
+.scoreboard-scores {
+  padding: 15px 30px;
+}
+.scores-container {
+  list-style: none;
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-column-gap: 3.33%;
+  grid-template-columns: 30% 30% 30%;
+  grid-row-gap: 20px;
+  margin: 20px 0;
+}
+.score-list-item {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  background: #fcfcfcfc;
+  transition: all 0.3s;
+  padding: 6px 10px;
+}
+.score-list-item:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
