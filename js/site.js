@@ -2,7 +2,7 @@ var isDevelopmentEnvironment = false;
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
 	isDevelopmentEnvironment = true;
 }
-var baseApiUrl = 'http://159.203.35.195/';
+var baseApiUrl = 'http://159.203.35.195';
 
 
 function capitalizeFirstLetter(string) {
