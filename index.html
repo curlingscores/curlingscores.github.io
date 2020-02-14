@@ -15,7 +15,7 @@
 				<h3 class="scoreboard-title">Scores</h3>
 
 				<ul class="scoreboard-events-container" >
-					<li class="scoreboard-events-list" v-for="event in events" v-on:click="activeEvent = event">
+					<li class="scoreboard-events-list" :class="{'selected' : activeEvent == event}" v-for="event in events" v-on:click="activeEvent = event">
 						<event v-bind="{event}"></event>
 					</li>
 				</ul>
@@ -31,8 +31,8 @@
 			<div class="event-name">
 				{{event.displayName}}
 			</div>
-			<div class="event-type">
-				{{event.division}}
+			<div class="event-type" v-bind:class="event.division">
+				{{event.division.charAt(0).toUpperCase() + event.division.slice(1)}}
 			</div>
 			<div class="event-location">
 				{{event.location}}
@@ -50,10 +50,11 @@
 			</select>
 			<ul class="scores-container" v-if="currentDraw && currentDraw.games && currentDraw.games.length > 0">
 				<li class="score-list-item" v-for="game in currentDraw.games" >
-					<div class="score-name score-home-name">{{game.homeTeamShortName}}</div>
-					<div class="score-amount score-home-amount">{{game.homeScore}}</div>
-					<div class="score-name score-away-name">{{game.awayTeamShortName}}</div>
-					<div class="score-amount score-away-amount">{{game.awayScore}}</div>
+					<div class="score-name score-home-name" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore > game.homeScore}">{{game.homeTeamShortName}}</div>
+					<div class="score-amount score-home-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore > game.homeScore}">{{game.homeScore}}</div>
+					<div class="score-name score-away-name" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore < game.homeScore}">{{game.awayTeamShortName}}</div>
+					<div class="score-amount score-away-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore < game.homeScore}">{{game.awayScore}}</div>
+					<div class="score-status-text">{{game.statusText}}</div>
 				</li>
 			</ul>
 			<p class="scores-no-games" v-else>No games!</p>
