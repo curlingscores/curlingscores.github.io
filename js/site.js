@@ -1,3 +1,9 @@
+var isDevelopmentEnvironment = false;
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+	isDevelopmentEnvironment = true;
+}
+var baseApiUrl = 'http://159.203.35.195/';
+
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -14,7 +20,7 @@ Vue.component ('scoreboard', {
 	mounted: function() {
 		var self = this;
 		$.ajax({
-			url: '/test-files/featured.json',
+			url: getFeaturedUrl(isDevelopmentEnvironment),
 			method: 'GET',
 			success: function(data){
 				self.events = data.data;
@@ -47,7 +53,7 @@ Vue.component ('scores', {
 			var self = this;
 			var activeEventId = newVal.eventId;  //Not being used yet but would be in production
 			$.ajax({
-				url: '/test-files/event-games' + ((Math.floor(Math.random() * Math.floor(3))) > 1 ? '2' : '') + '.json',
+				url: getEventGamesUrl(activeEventId, isDevelopmentEnvironment),
 				method: 'GET',
 				success: function(data){
 					self.currentDraw = getCurrentDraw(data);
@@ -79,4 +85,18 @@ function getCurrentDraw(draws){
 	}
 	console.log(closestDraw);
 	return closestDraw;
+}
+
+function getEventGamesUrl(eventId, isDevelopmentEnvironment){
+	if (isDevelopmentEnvironment) {
+		return '/test-files/event-games' + ((Math.floor(Math.random() * Math.floor(3))) > 1 ? '2' : '') + '.json';
+	}
+	return baseApiUrl + '/events/' + eventId + '/draws'
+}
+
+function getFeaturedUrl(isDevelopmentEnvironment){
+	if (isDevelopmentEnvironment){
+		return '/test-files/featured.json';
+	}
+	return baseApiUrl + '/featured';
 }
