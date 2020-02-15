@@ -1,6 +1,6 @@
 var isDevelopmentEnvironment = false;
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-	isDevelopmentEnvironment = true;
+	isDevelopmentEnvironment = false;
 }
 var baseApiUrl = 'http://159.203.35.195';
 
@@ -22,9 +22,11 @@ Vue.component ('scoreboard', {
 		$.ajax({
 			url: getFeaturedUrl(isDevelopmentEnvironment),
 			method: 'GET',
+			dataType: 'jsonp',
 			success: function(data){
-				self.events = data.data;
-				self.activeEvent = data.data[0];
+				var parsedData = JSON.parse(data.contents);
+				self.events = parsedData.data;
+				self.activeEvent = parsedData.data[0];
 			},
 			error: function(error){
 				console.log(error);
@@ -55,9 +57,11 @@ Vue.component ('scores', {
 			$.ajax({
 				url: getEventGamesUrl(activeEventId, isDevelopmentEnvironment),
 				method: 'GET',
+				dataType: 'jsonp',
 				success: function(data){
-					self.currentDraw = getCurrentDraw(data);
-					self.draws = data;
+					var parsedData = JSON.parse(data.contents);
+					self.currentDraw = getCurrentDraw(parsedData);
+					self.draws = parsedData;
 				},
 				error: function(error){
 					console.log(error);
