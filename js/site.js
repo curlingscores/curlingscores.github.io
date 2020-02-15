@@ -22,7 +22,6 @@ Vue.component ('scoreboard', {
 		$.ajax({
 			url: getFeaturedUrl(isDevelopmentEnvironment),
 			method: 'GET',
-			dataType: 'jsonp',
 			success: function(data){
 				self.events = data.data;
 				self.activeEvent = data.data[0];
@@ -56,7 +55,6 @@ Vue.component ('scores', {
 			$.ajax({
 				url: getEventGamesUrl(activeEventId, isDevelopmentEnvironment),
 				method: 'GET',
-				dataType: 'jsonp',
 				success: function(data){
 					self.currentDraw = getCurrentDraw(data);
 					self.draws = data;
