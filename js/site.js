@@ -93,12 +93,16 @@ function getEventGamesUrl(eventId, isDevelopmentEnvironment){
 	if (isDevelopmentEnvironment) {
 		return '/test-files/event-games' + ((Math.floor(Math.random() * Math.floor(3))) > 1 ? '2' : '') + '.json';
 	}
-	return baseApiUrl + '/events/' + eventId + '/draws'
+	return getReverseProxyUrl(baseApiUrl + '/events/' + eventId + '/draws');
 }
 
 function getFeaturedUrl(isDevelopmentEnvironment){
 	if (isDevelopmentEnvironment){
 		return '/test-files/featured.json';
 	}
-	return baseApiUrl + '/featured';
+	return getReverseProxyUrl(baseApiUrl + '/featured');
+}
+
+function getReverseProxyUrl(url){
+	return 'http://www.whateverorigin.org/get?url=' + encodeURIComponent(url) + '&callback=?';
 }
