@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+/* Colors */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +35,11 @@ html {
   background: white;
   display: grid;
   grid-template-columns: 300px auto;
+}
+@media only screen and (max-width: 719px) {
+  .scoreboard {
+    grid-template-columns: 100%;
+  }
 }
 .scoreboard-title {
   grid-column-start: 1;
@@ -48,6 +72,27 @@ select.draw-select {
   cursor: pointer;
   border-left: 5px solid #6daaf8;
 }
+@media only screen and (max-width: 719px) {
+  .event-scoreboard-header {
+    background-color: #333;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .scoreboard-scores-container {
+    display: none;
+  }
+  .scoreboard-scores-container.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    left: 0;
+    right: 0;
+  }
+}
 .scoreboard-scores {
   padding: 15px 30px;
 }
@@ -60,16 +105,26 @@ select.draw-select {
   grid-row-gap: 20px;
   margin: 20px 0;
 }
+@media only screen and (max-width: 1240px) {
+  .scores-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media only screen and (max-width: 929px) {
+  .scores-container {
+    grid-template-columns: 100%;
+  }
+}
 .score-list-item {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  background: #fcfcfcfc;
+  background: #f7f7f7f7;
   transition: all 0.3s;
   padding: 6px 10px;
   display: grid;
   grid-template-columns: auto 50px 70px;
 }
 .score-list-item:hover {
-  background: #f1f1f1;
+  background: #f0f1f1;
   cursor: pointer;
 }
 .score-home-name {
