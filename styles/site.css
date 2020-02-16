@@ -236,7 +236,8 @@ select.draw-select {
 }
 .score-name.loser,
 .score-amount.loser {
-  color: #555;
+  color: #666;
+  font-weight: 100;
 }
 .score-amount {
   align-self: center;
