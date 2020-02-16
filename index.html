@@ -57,10 +57,10 @@
 			</select>
 			<ul class="scores-container" v-if="currentDraw && currentDraw.games && currentDraw.games.length > 0">
 				<li class="score-list-item" v-for="game in currentDraw.games" >
-					<div class="score-name score-home-name" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore > game.homeScore}">{{game.homeTeamShortName}}</div>
-					<div class="score-amount score-home-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore > game.homeScore}">{{game.homeScore}}</div>
-					<div class="score-name score-away-name" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore < game.homeScore}">{{game.awayTeamShortName}}</div>
-					<div class="score-amount score-away-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && game.awayScore < game.homeScore}">{{game.awayScore}}</div>
+					<div class="score-name score-home-name" v-bind:class="{'loser' : game.gameStatus == 'final' && parseInt(game.awayScore) > parseInt(game.homeScore)}">{{game.homeTeamShortName}}</div>
+					<div class="score-amount score-home-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && parseInt(game.awayScore) > parseInt(game.homeScore)}">{{game.homeScore}}</div>
+					<div class="score-name score-away-name" v-bind:class="{'loser' : game.gameStatus == 'final' && parseInt(game.awayScore) < parseInt(game.homeScore)}">{{game.awayTeamShortName}}</div>
+					<div class="score-amount score-away-amount" v-bind:class="{'loser' : game.gameStatus == 'final' && parseInt(game.awayScore) < parseInt(game.homeScore)}">{{game.awayScore}}</div>
 					<div class="score-status-text">{{game.statusText}}</div>
 				</li>
 			</ul>
