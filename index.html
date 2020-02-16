@@ -21,9 +21,9 @@
 				</ul>
 				<div class="scoreboard-scores-container" :class="{'active' : eventIsActive}">
 					<div class="event-scoreboard-header">
-						<div class="back-button" v-on:click="eventIsActive = false"><</div>
+						<div class="back-button score-navigation-button" v-on:click="eventIsActive = false">&lsaquo;</div>
 						<h4 class="scoreboard-event-name">{{activeEvent.displayName}}</h4>
-						<div class="exit-button" v-on:click="eventIsActive = false">X</div>
+						<div class="exit-button score-navigation-button" v-on:click="eventIsActive = false">&#10005;</div>
 					</div>
 					<scores v-bind="{activeEvent}"></scores>
 				</div>
@@ -46,7 +46,10 @@
 	</script>
 
 	<script type="text/x-template" id="scores">
-		<div class="scoreboard-scores" v-if="!linescoreIsActive">
+		<div class="loading-scores" v-if="loading">
+			<div class="loading-circle"></div>
+		</div>
+		<div class="scoreboard-scores" v-else-if="!linescoreIsActive">
 			<select class="draw-select" v-if="draws && draws.length > 0">
 				<option class="draw-select-option" v-for="draw in draws">
 					{{draw.drawName}}

@@ -48,13 +48,15 @@ Vue.component ('scores', {
 		return {
 			currentDraw: {},
 			draws: {},
-			linescoreIsActive: false
+			linescoreIsActive: false,
+			loading: false
 		}
 	},
 	watch:  {
 		activeEvent: function(newVal, oldVal) {
 			var self = this;
 			var activeEventId = newVal.eventId;  //Not being used yet but would be in production
+			self.loading = true;
 			$.ajax({
 				url: getEventGamesUrl(activeEventId, isDevelopmentEnvironment),
 				method: 'GET',
@@ -63,9 +65,11 @@ Vue.component ('scores', {
 					var parsedData = JSON.parse(data.contents);
 					self.currentDraw = getCurrentDraw(parsedData);
 					self.draws = parsedData;
+					self.loading = false;
 				},
 				error: function(error){
 					console.log(error);
+					self.loading = false;
 				}
 			});
 		}
